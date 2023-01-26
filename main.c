@@ -1,6 +1,6 @@
 #include "stdio.h"
 
-void	ft_memmove_call()
+/*void	ft_memmove_call()
 {
 	char	*dst;
 	char	*src;
@@ -27,5 +27,13 @@ int		main()
 {
 	ft_memmove_call();
 
+	return (0);
+}*/
+
+int	main()
+{
+
+	isalpha();
+	ft
 	return (0);
 }

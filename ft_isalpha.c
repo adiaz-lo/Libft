@@ -6,9 +6,11 @@
 #    By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/26 12:52:56 by adiaz-lo          #+#    #+#              #
-/*   Updated: 2023/01/26 13:42:18 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/01/27 09:32:09 by adiaz-lo         ###   ########.fr       */
 #                                                                              #
 # **************************************************************************** #
+
+/* Devuelve true si c es una letra y false si no lo es*/
 
 int	ft_isupper (int c)
 {

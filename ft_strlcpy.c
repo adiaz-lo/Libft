@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 10:18:32 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/02/09 17:44:34 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/02/08 11:48:54 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/02/08 15:13:18 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Copia el valor de c (convertido a un unsigned char) en cada uno de los
- * primeros size bytes del objeto que comienza en block. Devuelve el valor de
- * block.*/
 
-void	*ft_memset(void *block, int c, size_t size)
+size_t ft_strlcpy(char * restrict dst, const char restrict *src, size_t dstsize)
 {
-	char	tempc;
-	char	*cblock;
-	int		i;
 
-	tempc = (unsigned char) c;
-	cblock = (char *) block;
-	i = 0;
-	while (i < size)
-	{
-		cblock[i] = tempc;
-		i++;
-	}
-	block (void *);
-	return (block);
+	return ;
 }

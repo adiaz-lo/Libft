@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 17:27:53 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/24 14:40:25 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/03/24 12:14:50 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/03/24 12:58:44 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t size)
 {
-	while (s1++ && s2++ && size--)
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-	return (0);
+	unsigned char	uc1;
+	unsigned char	uc2;
+	int				
 }

@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 17:27:53 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/24 14:40:25 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/03/24 10:11:14 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/03/24 15:01:07 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t size)
+void	*ft_memchr(const void *s, int c, size_t size)
 {
-	while (s1++ && s2++ && size--)
-		if (*s1 != *s2)
-			return (*s1 - *s2);
+	unsigned char	ucs;
+
+	ucs = (unsigned char)c;
+	while (size-- > 0 && *s++)
+		if (ucs == *s)
+			return (s);
 	return (0);
 }

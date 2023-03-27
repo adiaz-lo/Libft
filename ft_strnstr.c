@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 17:27:53 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/27 16:37:43 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/03/27 10:17:22 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/03/27 18:01:14 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t size)
+#include <stdio.h>
+
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-	while (s1 && s2 && size)
+	char	*fst;
+
+	fst = haystack;
+	while (fst++ && needle++ && len--)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-	s1++;
-	s2++;
-	size--;
+		printf("%c", *haystack);
+		if (*fst == *needle)
+			return (fst);
 	}
+	return ("Error");
+}
+
+int main()
+{
+	char	*cadena;
+	cadena = strnstr("Hola", "la", 4);
+	printf("%s", cadena);
 	return (0);
 }

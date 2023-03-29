@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr_.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 10:17:22 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/27 18:01:14 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/03/29 16:17:54 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/03/29 17:31:17 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*strnstr(const char *haystack, const char *needle, size_t len)
-{
-	char	*fst;
-
-	fst = haystack;
-	while (fst++ && needle++ && len--)
-	{
-		printf("%c", *haystack);
-		if (*fst == *needle)
-			return (fst);
+char	*ft_strnstr_(const char* haystack, const char* needle, size_t len){
+	int	i;
+	int	j;
+	
+	if (!haystack)
+		return (0);
+	if (!needle){
+		return ((char *)haystack);
 	}
-	return ("Error");
-}
-
-int main()
-{
-	char	*cadena;
-	cadena = strnstr("Hola", "la", 4);
-	printf("%s", cadena);
+	i = 0;
+	while (haystack[i] && i < len){
+		j = 0;
+		while (needle[j] == haystack[i + j]){
+			if (i + j >= len)
+				return (0);
+			if (needle[++j] == 0)
+				return (char *)(haystack + i);
+		}
+		i++;
+	}
 	return (0);
 }

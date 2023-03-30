@@ -6,11 +6,9 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:12:56 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/01/27 09:30:58 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/03/30 09:36:09 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Devuelve true si c es un dígito decimal y false si no lo es*/
 
 int ft_isdigit (int c)
 {

@@ -6,14 +6,9 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:03:50 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/02/15 15:08:14 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:29:48 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
- * Si c es una letra mayúscula, devuelve la letra minúscula correspondiente.
- * De lo contrario c se devuelve sin cambios.
-*/ 
 
 int	ft_tolower(int c)
 {

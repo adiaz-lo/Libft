@@ -32,7 +32,10 @@ int		main()
 
 int	main()
 {
-
+    char    *cadena;
+    cadena = strnstr("Hola", "la", 4);
+    printf("%s", cadena);
+    return (0);
 	isalpha();
 	ft
 	return (0);

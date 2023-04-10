@@ -6,11 +6,11 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:54:19 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/30 09:36:26 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:17:39 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isgraph (int c)
+int	ft_isgraph(int c)
 {
 	if (c > ' ' && c < 127)
 		return (1);
@@ -18,7 +18,7 @@ int ft_isgraph (int c)
 		return (0);
 }
 
-int ft_isprint (int c)
+int	ft_isprint(int c)
 {
 	if (ft_isgraph(c) || c == ' ')
 		return (1);

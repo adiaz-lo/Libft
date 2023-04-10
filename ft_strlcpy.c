@@ -6,13 +6,9 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:48:54 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/02/14 12:08:36 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:21:00 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Copia caracteres hasta dstsize -1 del string src a dst, terminando el
- * resultado en 0/NULL si dstsize no es 0.
-*/
 
 size_t	ft_strlcpy(char *restrict dst, const char restrict *src, size_t dstsize)
 {
@@ -27,5 +23,5 @@ size_t	ft_strlcpy(char *restrict dst, const char restrict *src, size_t dstsize)
 		i++;
 	}
 	dst[dstsize] = 0;
-	return ft_strlen(src);
+	return (ft_strlen(src));
 }

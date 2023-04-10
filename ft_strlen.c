@@ -6,13 +6,13 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:06:48 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/30 12:27:28 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:22:45 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen (const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t length;
+	size_t	length;
 
 	length = 0;
 	while (*s++)

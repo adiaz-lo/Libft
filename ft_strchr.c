@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:00:54 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/30 10:30:20 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:20:09 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ char	*ft_strchr(const char *string, int c)
 	return (0);
 }
 
-char    *ft_strchr(const char *string, int c)
+char	*ft_strchr(const char *string, int c)
 {
-    char    cchar;
+	char	cchar;
 
-    cchar = (char)c;
-    while (ft_strlen(string)--)
-    {
-        if (cchar == *string)
-            return (string);
-    }
-    return (0);
+	cchar = (char)c;
+	while (ft_strlen(string)--)
+	{
+		if (cchar == *string)
+			return (string);
+	}
+	return (0);
 }

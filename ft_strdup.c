@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 15:03:50 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/10 17:23:10 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/04/10 12:19:39 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/04/10 12:43:33 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+char	*strdup(const char *s)
 {
-	if (c > 64 && c < 91)
-		return (c + 32);
-	return (c);
+	char			*scpy;
+	const size_t	len = ft_strlen(s) + 1;
+
+	scpy = malloc(len);
+	if (scpy)
+		ft_strlcpy(scpy, s, len);
+	else
+		return (NULL);
+	return (scpy);
 }

@@ -6,11 +6,11 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 09:27:40 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/30 09:34:07 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 15:05:46 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);

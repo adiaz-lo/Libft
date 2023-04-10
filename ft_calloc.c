@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 15:03:50 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/10 17:23:10 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/04/10 11:54:13 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/04/10 12:27:15 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+void	*ft_calloc(size_t count, size_t eltsize)
 {
-	if (c > 64 && c < 91)
-		return (c + 32);
-	return (c);
+	void	*value;
+
+	value = malloc(count);
+	if (value)
+		ft_memset(value, 0, count * eltsize);
+	else
+		return (NULL);
+	return (value);
 }

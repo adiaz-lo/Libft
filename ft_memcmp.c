@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 12:14:50 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/24 12:58:44 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/10 17:24:18 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t size)
 {
 	unsigned char	uc1;
 	unsigned char	uc2;
-	int				
+	int				;
 }

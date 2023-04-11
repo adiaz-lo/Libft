@@ -2,3 +2,8 @@ This program will locate the first occurrence of the null-terminated given subst
 
 While substring is not NULL & string is not NULL & length is not NULL
 	
+
+char	*ft_substr(char const *s, uint start, size_t len);
+
+const size_t sl = ft_strlen(s);
+

@@ -30,7 +30,7 @@ int		main()
 	return (0);
 }*/
 
-int	main()
+/*int	main()
 {
     char    *cadena;
     cadena = strnstr("Hola", "la", 4);
@@ -38,5 +38,11 @@ int	main()
     return (0);
 	isalpha();
 	ft
+	return (0);
+}
+*/
+
+int		main(int argc, char *argv[])
+{
 	return (0);
 }

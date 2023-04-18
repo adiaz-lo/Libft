@@ -1,48 +1,22 @@
-#include "stdio.h"
+/*
+ * =====================================================================================
+ *
+ *       Filename:  main.c
+ *
+ *    Description:  
+ *
+ *        Version:  1.0
+ *        Created:  04/18/2023 17:05:17
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Dr. Fritz Mehner (mn), mehner@fh-swf.de
+ *        Company:  FH Südwestfalen, Iserlohn
+ *
+ * =====================================================================================
+ */
+int token_counter(char const *s, char c);
 
-/*void	ft_memmove_call()
-{
-	char	*dst;
-	char	*src;
-	int		n;
-
-	dst = "Hello";
-	src = "Adasdasdasdasdasdasdasdasdashdjkashdjkashdjkashdjkahsdjkhjkashdjkashdjkashdjkashdjkashdjkalshdjkalhdjkashjkadshjkakorld";
-	n = 6;
-		printf("The string is %s, which pointer is the following %p", dst, dst);
-		printf("\n");
-		printf("The string is %s, which pointer is the following %p", src, src);
-		printf("\n");
-		printf("\n");
-	if (dst > src)
-	{
-		printf("The string is %s, which pointer is the following %p", dst, dst);
-		printf("\n");
-}
-	else
-		printf("The string is %s, which pointer is the following %p", src, src);
-}
-
-int		main()
-{
-	ft_memmove_call();
-
-	return (0);
-}*/
-
-/*int	main()
-{
-    char    *cadena;
-    cadena = strnstr("Hola", "la", 4);
-    printf("%s", cadena);
-    return (0);
-	isalpha();
-	ft
-	return (0);
-}
-*/
-
-int		main(int argc, char *argv[])
-{
-	return (0);
+int main(int argc, char *argv[]){
+	printf("NPalabras %d\n", token_counter(argv[1], ' '));
 }

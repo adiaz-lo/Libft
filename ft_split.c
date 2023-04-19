@@ -6,11 +6,12 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 10:28:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/18 18:20:12 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:43:10 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
+#include <stdlib.h>
 
 int		count_words(char const *s, char c)
 {
@@ -33,10 +34,16 @@ int		count_words(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
-//	char	*token;
-	int		istoken;
-	
-	int		nPalabras = count_words(s, c);
-	matrix = malloc(/*count_words(s, c)*/ nPalabras * sizeof(char *));
+	int		wordnu;
+	int		i;
+
+	wordnu = count_words(s, c);
+	matrix = malloc(wordnu * sizeof(char *));
+	i = 0;
+	while (wordnu--)
+	{
+		matrix[i] = ft_substr(s, i, ft_strlen(matrix[i]));
+		i++;
+	}	
 	return (0);
 }

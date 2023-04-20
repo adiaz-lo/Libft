@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 10:28:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/19 15:43:10 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:22:51 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,8 @@ char	**ft_split(char const *s, char c)
 	wordnu = count_words(s, c);
 	matrix = malloc(wordnu * sizeof(char *));
 	i = 0;
-	while (wordnu--)
-	{
-		matrix[i] = ft_substr(s, i, ft_strlen(matrix[i]));
+	while (*matrix && *matrix == )
 		i++;
-	}	
 	return (0);
 }
+		matrix[i] = ft_substr(s, i, ft_strlen(matrix[i]));

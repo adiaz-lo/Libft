@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 12:45:48 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/10 17:46:15 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/21 15:06:31 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ int     ft_toupper(int c);
 
 //		MANDATORY - PART 2
 
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+char **ft_split(char const *s, char c);
 
 
 #endif

@@ -6,9 +6,11 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:53:22 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/03/30 09:55:14 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:14:57 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memmove(void *to, const void *from, size_t size)
 {

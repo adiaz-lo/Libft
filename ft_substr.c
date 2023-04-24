@@ -6,9 +6,11 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 09:25:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/14 15:40:44 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:18:45 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

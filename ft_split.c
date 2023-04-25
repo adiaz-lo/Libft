@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 10:28:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 15:39:01 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/25 15:43:29 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ static int	ft_count_words(char const *s, char c)
 	if (*(s - 1) != c)
 		tnum++;
 	return (tnum);
+}
+
+static	char	*ft_malloc(){
+	
 }
 
 static	char	**ft_free_split(char **matrix)

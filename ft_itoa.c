@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 12:14:50 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/25 15:05:37 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/04/25 15:08:34 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/04/25 16:19:01 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_memcmp(const void *s1, const void *s2, size_t size)
+static int	ft_intlen(int n)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
+	size_t	len;
 
-	str1 = (unsigned char*) s1;
-	str2 = (unsigned char*) s2;
-	while (n > 0)
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (!n)
 	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
-		str1++;
-		str2++;
-		n--;
+		n /= 10;
+		++len;
 	}
-	return (0);
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	while (n > 0)
 }

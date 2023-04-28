@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 10:28:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/25 15:43:29 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/28 10:46:22 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ static int	ft_count_words(char const *s, char c)
 	return (tnum);
 }
 
-static	char	*ft_malloc(){
-	
-}
-
 static	char	**ft_free_split(char **matrix)
 {
 	int		i;
@@ -52,13 +48,13 @@ static	char	**ft_free_split(char **matrix)
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
-	int		word_len;
 	int		i;
 	char	*word_start;
 	char	*word_end;
 
-	word_len = count_words(s, c) + 1;
-	matrix = malloc(word_len * sizeof(char *));
+	matrix = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!matrix)
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
@@ -68,8 +64,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		word_end = (char *)s;
-		word_len = word_end - word_start;
-		matrix[i++] = ft_substr(word_start, 0, word_len);
+		matrix[i++] = ft_substr(word_start, 0, word_end - word_start);
 		if (!(matrix[i - 1]))
 			return (ft_free_split(matrix));
 	}

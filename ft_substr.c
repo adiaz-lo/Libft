@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 09:25:20 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:18:45 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/28 10:53:01 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str = malloc(len + 1);
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1 + start, len + 1);
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }

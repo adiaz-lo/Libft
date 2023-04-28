@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 10:18:32 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:15:20 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:43:17 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 void	*ft_memset(void *block, int c, size_t size)
 {
-	char	tempc;
-	char	*cblock;
-	int		i;
+	char	temp_c;
+	char	*c_block;
+	size_t	i;
 
-	tempc = (unsigned char) c;
-	cblock = (char *) block;
+	temp_c = (unsigned char) c;
+	c_block = (char *) block;
 	if (size <= 0)
 		return (block);
 	i = 0;
 	while (i < size)
 	{
-		cblock[i] = tempc;
+		c_block[i] = temp_c;
 		i++;
 	}
-	block (void *);
 	return (block);
 }

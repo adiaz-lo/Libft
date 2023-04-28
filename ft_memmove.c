@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:53:22 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:14:57 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:35:58 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 void	*memmove(void *to, const void *from, size_t size)
 {
-	char	*cfrom;
-	char	*cto;
-	char	*temp;
-	int		i;
+	char	*c_from;
+	char	*c_to;
+	char	*c_temp;
+	size_t	i;
 
-	*cfrom = (char *)from;
-	*cto = (char *)to;
-	ctemp[size];
+	c_from = (char *)from;
+	c_to = (char *)to;
+	c_temp = malloc(size);
 	i = 0;
 	while (i < size)
 	{
-		ctemp[i] = cfrom[i];
+		c_temp[i] = c_from[i];
 		i++;
 	}
 	i = 0;
 	while (i < size)
 	{
-		cto[i] = ctemp[i];
+		c_to[i] = c_temp[i];
 		i++;
 	}
 	return (to);

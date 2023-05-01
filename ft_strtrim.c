@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:36:21 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:18:29 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:27:21 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (0);
 	if (*set == '\0')
-		return (s1);
+		return ((char *)s1);
 	fst = 0;
 	while (ft_strchr(set, s1[fst]))
 		++fst;

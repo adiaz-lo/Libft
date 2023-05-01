@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 12:45:48 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/25 15:06:35 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:56:47 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_isprint(int c);
 void	*ft_memchr(const void *s, int c, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t size);
 void	*ft_memcpy(void *to, const void *from, size_t size);
-void	*memmove(void *to, const void *from, size_t size);
+void	*ft_memmove(void *to, const void *from, size_t size);
 void	*ft_memset(void *block, int c, size_t size);
 char	*ft_strchr(const char *string, int c);
 char	*strdup(const char *s);

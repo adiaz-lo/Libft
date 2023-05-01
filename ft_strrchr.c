@@ -6,7 +6,7 @@
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:57:29 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:18:03 by adiaz-lo         ###   ########.fr       */
+/*   Updated: 2023/05/01 17:37:19 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *string, int c)
 {
-	char	cchar;
-	int		i;
+	char	c_char;
+	size_t	len;
 
-	cchar = (char)c;
-	i = 0;
-	while (ft_strlen(string) > i)
+	c_char = (char)c;
+	len = ft_strlen(string);
+	while (len >= 0)
 	{
-		if (cchar == string[ft_strlen(string) - i])
-			return (string);
-		i++;
+		if (c_char == string[len])
+			return ((char *)string + len);
+		len--;
 	}
 	return (0);
 }

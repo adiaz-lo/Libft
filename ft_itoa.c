@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
 	size_t	len;
 
 	len = 0;
 	if (n <= 0)
 		len = 1;
-	while (!n)
+	while (n)
 	{
 		n /= 10;
 		++len;
@@ -27,5 +27,17 @@ static int	ft_intlen(int n)
 
 char	*ft_itoa(int n)
 {
+	char	*string;
+	size_t	len;
+
+	len = ft_intlen(n);
+	if (len == 0)
+	{
+		string = malloc (len);
+		string[0] = 0;
+		string[1] = '\0';
+	}
 	while (n > 0)
+
+	return(0);
 }

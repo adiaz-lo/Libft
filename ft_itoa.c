@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static size_t	ft_intlen(int n)
 {
 	size_t	len;
@@ -31,13 +33,18 @@ char	*ft_itoa(int n)
 	size_t	len;
 
 	len = ft_intlen(n);
-	if (len == 0)
+	string = malloc (len);
+	if (!string)
+		return (NULL);
+	if (n < 0)
 	{
-		string = malloc (len);
-		string[0] = 0;
-		string[1] = '\0';
+		string[0] = '0';
+		n = -n;
+	}	
+	while (n)
+	{
+		string[--len] = n % 10;
+		n /= 10;
 	}
-	while (n > 0)
-
-	return(0);
+	return (string);
 }

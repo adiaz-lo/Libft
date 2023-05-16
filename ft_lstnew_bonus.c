@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 09:12:56 by adiaz-lo          #+#    #+#             */
-/*   Updated: 2023/04/24 16:10:40 by adiaz-lo         ###   ########.fr       */
+/*   Created: 2023/05/16 12:30:28 by adiaz-lo          #+#    #+#             */
+/*   Updated: 2023/05/16 12:30:30 by adiaz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+t_list *ft_lstnew(void *content)
 {
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	else
-		return (0);
+	t_list	*l_new;
+
+	l_new = (t_list *)malloc(sizeof(t_list));
+	if (!l_new)
+		return (NULL);
+	l_new->content = content;
+	l_new->next = NULL;
+	return (l_new);
 }

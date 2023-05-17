@@ -22,7 +22,7 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 	if (c_to == NULL && c_from == NULL)
 		return (NULL);
 	if (c_to < c_from)
-		return(ft_memcpy(to, from, size));	
+		return (ft_memcpy(to, from, size));
 	else
 		while (size--)
 			c_to[size] = c_from[size];

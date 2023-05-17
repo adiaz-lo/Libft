@@ -23,27 +23,26 @@ static int	ft_isspace(int c)
 
 int	ft_atoi(const char *string)
 {
-	char	*strc;
 	int		sign;
 	int		number;
 
-	strc = (char *)string;
-	while (*strc == ft_isspace(*strc))
-		strc++;
-	if (*strc == '-')
+	sign = 1;
+	while (ft_isspace(*string))
+		string++;
+	if (*string == '-')
 	{
 		sign = -1;
-		strc++;
+		string++;
 	}
-	else if (*strc == '+')
+	else if (*string == '+')
 	{
-		sign = 1;
-		strc++;
+		string++;
 	}
 	number = 0;
-	while (ft_isdigit(*strc++))
+	while (ft_isdigit(*string))
 	{
-		number = 10 * number + (*strc - '0');
+		number = 10 * number + (*string - '0');
+		string++;
 	}
-	return (ft_isspace(string[0]));
+	return (sign * number);
 }

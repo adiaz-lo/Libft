@@ -39,7 +39,7 @@ $(NAME) : $(OBJS) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJS)
 
 bonus : $(OBJS_BONUS) $(INCLUDE)
-	$(LIB) $(NAME) $(OJBS_BONUS)
+	$(LIB) $(NAME) $(OBJS_BONUS)
 
 clean : 
 	$(RM) $(OBJS)

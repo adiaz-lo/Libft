@@ -11,18 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_count_words(char const *s, char c)
 {
-	char const	*pcpy;
 	int			tnum;
 
-	pcpy = s;
 	tnum = 0;
 	while (*s != '\0')
 	{
-		if (*s == c && s != pcpy && *(s - 1) != c)
+		if (*s == c && *(s - 1) != c)
 			tnum++;
 		s++;
 	}

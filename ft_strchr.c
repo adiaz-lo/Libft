@@ -19,7 +19,7 @@ char	*ft_strchr(const char *string, int c)
 
 	str = (char *)string;
 	c_char = (char)c;
-	while (ft_strlen(str))
+	while (*str)
 	{
 		if (c_char == *str)
 			return (str);

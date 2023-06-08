@@ -12,24 +12,23 @@
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
-	unsigned int	i;
-	int				word_counter;
+	size_t	wcount;
 
-	i = 0;
-	word_counter = 0;
-	if (s == 0 || s[i] == '\0')
+	if (!*s)
 		return (0);
-	if (s[0] != c)
-		word_counter = 1;
-	while (s[i] != '\0')
+	wcount = 0;
+	while (*s)
 	{
-		if (s[i + 1] != c && s[i + 1] != '\0' && s[i] == c)
-			word_counter++;
-		i++;
+		while (*s == c)
+			s++;
+		if (*s)
+			wcount++;
+		while (*s != c && *s)
+			s++;
 	}
-	return (word_counter);
+	return (wcount);
 }
 
 static	char	**ft_free_split(char **matrix)
@@ -82,19 +81,3 @@ char	**ft_split(char const *s, char c)
 	matrix[i] = NULL;
 	return (matrix);
 }
-
-/*int	main(int argc, char **argv)
-{
-	char	**vuelta;
-	int	i;
-
-	i = 0;
-	vuelta = ft_split(argv[1], ' ');
-	while (i <= ft_count_words(argv[1], ' '))
-	{
-		printf("Split: %s\n", vuelta[i]);
-		i++;
-	}
-		printf("Word Number: %d\n", ft_count_words(argv[1], ' '));
-}
-*/

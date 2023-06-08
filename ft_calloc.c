@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t eltsize)
 
 	value = malloc(count * eltsize);
 	if (value)
-		ft_memset(value, 0, count * eltsize);
+		ft_bzero(value, count * eltsize);
 	else
 		return (NULL);
 	return (value);

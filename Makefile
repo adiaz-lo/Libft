@@ -12,11 +12,13 @@
 
 NAME = libft.a
 
-CC = gcc
+CC = clang
+
+SRC_DIR = src/
 
 CCFLAGS = -Wall -Werror -Wextra
 
-INCLUDE = libft.h
+INCLUDE = includes/libft.h
 
 LIB = ar -rcs
 
@@ -26,7 +28,9 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 
 SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-OBJS = $(SRCS:.c=.o)
+DIR_PREFIX = $(addprefix $(SRC_DIR), $(SRCS))
+
+OBJS = $(DIR_PREFIX:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 

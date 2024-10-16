@@ -16,6 +16,8 @@ CC = clang
 
 SRC_DIR = src/
 
+GNL_SRC_DIR = src/GNL/
+
 CCFLAGS = -Wall -Werror -Wextra
 
 INCLUDE = includes/libft.h
@@ -28,11 +30,17 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 
 SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
+GNL_SRCS = get_next_line.c #get_next_line_utils.c
+
 DIR_PREFIX = $(addprefix $(SRC_DIR), $(SRCS))
+
+GNL_DIR_PREFIX = $(addprefix $(GNL_SRC_DIR), $(GNL_SRCS))
 
 OBJS = $(DIR_PREFIX:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
+GNL_OBJS = $(GNL_DIR_PREFIX:.c=.o)
 
 all : $(NAME)
 
@@ -45,8 +53,14 @@ $(NAME) : $(OBJS) $(INCLUDE)
 bonus : $(OBJS_BONUS) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJS_BONUS)
 
+gnl :	$(OBJS) $(GNL_OBJS) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJS) $(GNL_OBJS)
+
 clean : 
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) 
+
+gnl_clean : clean
+	$(RM) $(GNL_OBJS)
 
 fclean : clean
 	$(RM) $(NAME)

@@ -16,6 +16,10 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
+# include <stddef.h>
+# include "get_next_line.h"
 
 typedef struct s_list
 {
@@ -74,5 +78,24 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+
+//	GNL
+
+int             find_nl_pos(const char *s);
+
+/*char    *ft_substr(char *s, size_t start, size_t len);
+
+char    *ft_strjoin(char *s1, char *s2);*/
+
+char    *read_lines(int fd, char *text);
+
+char    *get_next_line(int fd);
+
+//size_t  ft_strlen(const char *str);
+
+char    *get_final_line(char *line, char **text);
+
+char    *process_line(char *line, char **text, int i);
 
 #endif

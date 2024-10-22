@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adiaz-lo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -114,13 +114,13 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || fd > 1024)
 	{
-		free(text[fd]);
+		//free(text[fd]);
 		text[fd] = NULL;
 		return (NULL);
 	}
 	if (read(fd, NULL, 0))
 	{
-		free(text[fd]);
+		//free(text[fd]);
 		text[fd] = NULL;
 		return (NULL);
 	}
